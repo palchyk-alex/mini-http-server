@@ -51,6 +51,8 @@ int main() {
             exit(EXIT_FAILURE);
         }
 
+        printf("Connection accepted from %s:%d\n", inet_ntoa(address.sin_addr), ntohs(address.sin_port));
+
         // Read request (though we don't use it for simplicity)
         read(new_socket, buffer, BUFFER_SIZE);
 
